@@ -7,11 +7,9 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/jdp.csproj",
+                "${workspaceFolder}/jdp.csproj",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary",
-                "/property:BaseOutputPath=${workspaceFolder}/bin/",
-                "/property:BaseIntermediateOutputPath=${workspaceFolder}/obj/"
+                "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -21,11 +19,9 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/src/jdp.csproj",
+                "${workspaceFolder}/jdp.csproj",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary",
-                "/property:BaseOutputPath=${workspaceFolder}/bin/",
-                "/property:BaseIntermediateOutputPath=${workspaceFolder}/obj/"
+                "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -36,11 +32,9 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/src/jdp.csproj",
+                "${workspaceFolder}/jdp.csproj",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary",
-                "/property:BaseOutputPath=${workspaceFolder}/bin/",
-                "/property:BaseIntermediateOutputPath=${workspaceFolder}/obj/"
+                "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         }
