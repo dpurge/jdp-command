@@ -12,7 +12,7 @@ namespace jdp
         public static void Split(
             FileInfo input,
             DirectoryInfo output,
-            string pageFilename,
+            string PageName,
             bool verbose,
             IConsole console,
             CancellationToken cancellationToken)
@@ -33,33 +33,33 @@ namespace jdp
         public static Command GetCommand(Option Verbose)
         {
             var InputFile = new Option<FileInfo>(
-                aliases: new[] { "--input", "-i" },
+                aliases: new[] {  "--input-file", "--input", "-i" },
                 description: "Input file");
             InputFile.IsRequired = true;
 
             var InputDirectory = new Option<DirectoryInfo>(
-                aliases: new[] { "--input", "-i" },
+                aliases: new[] { "--input-directory", "--input", "-i" },
                 description: "Input directory");
             InputDirectory.IsRequired = true;
 
             var OutputFile = new Option<FileInfo>(
-                aliases: new[] { "--output", "-o" },
+                aliases: new[] { "--output-file", "--output", "-o" },
                 description: "Output file");
 
             var OutputDirectory = new Option<DirectoryInfo>(
-                aliases: new[] { "--output", "-o" },
+                aliases: new[] { "--output-directory", "--output", "-o" },
                 description: "Output directory");
 
-            var OutputPageFilenameTemplate = new Option<string>(
-                aliases: new[] { "--page-filename", "-p" },
-                description: "Output page file name template",
-                getDefaultValue: () => "page-000.djvu");
+            var PageName = new Option<string>(
+                aliases: new[] { "--page-name", "--page", "-p" },
+                description: "Page name",
+                getDefaultValue: () => "page-000");
 
             var splitCmd = new Command("split", "Split DJVU document into pages")
             {
                 InputFile.ExistingOnly(),
                 OutputDirectory,
-                OutputPageFilenameTemplate,
+                PageName,
                 Verbose
             };
 
