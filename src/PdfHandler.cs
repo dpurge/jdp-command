@@ -23,7 +23,7 @@ namespace jdp
                     Path.GetFileNameWithoutExtension(input.Name));
             }
 
-            int delay = 0;
+            const int delay = 0;
             // while (!cancellationToken.IsCancellationRequested)
             // {
                 await Task.Delay(delay, cancellationToken);
@@ -46,6 +46,7 @@ namespace jdp
             CancellationToken cancellationToken)
         {
             console.Out.WriteLine($"I am pdf join method!");
+            await Task.Delay(0, cancellationToken);
             return 0;
         }
         
