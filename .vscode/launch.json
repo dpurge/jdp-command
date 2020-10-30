@@ -5,14 +5,14 @@
    "version": "0.2.0",
    "configurations": [
         {
-            "name": ".NET Core Launch (console)",
+            "name": "pdfprintsplit",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/jdp.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/src",
+            "program": "${workspaceFolder}/bin/jdp/net5.0/jdp.dll",
+            "args": ["pdfprintsplit", "--input-file", "LICENSE"],
+            "cwd": "${workspaceFolder}",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
