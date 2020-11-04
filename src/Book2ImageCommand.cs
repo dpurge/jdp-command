@@ -142,6 +142,7 @@ namespace jdp.command
 
             startInfo.UseShellExecute = false;
             startInfo.RedirectStandardOutput = true;
+            startInfo.RedirectStandardError = true;
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.CreateNoWindow = true;
 
@@ -149,6 +150,7 @@ namespace jdp.command
                 pProcess.StartInfo = startInfo;
                 pProcess.Start();
                 string output = pProcess.StandardOutput.ReadToEnd();
+                string error = pProcess.StandardError.ReadToEnd();
                 pProcess.WaitForExit();
             }
 
